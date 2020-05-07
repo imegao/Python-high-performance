@@ -2,25 +2,14 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-        agent {
+            agent {
                 docker {
                     image 'python'
                 }
             }
             steps {
-                sh 'python -m main.py'
-                echo "is build"
+                sh 'python main.go'
             }
         }
-        stage('Test') {
-            steps {
-                echo "is test"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                sh 'is deploy'
-            }
-        }
-     }
+    }
 }
