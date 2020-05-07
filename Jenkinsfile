@@ -2,7 +2,13 @@ pipeline {
     agent none
     stages {
         stage('Build') {
+        agent {
+                docker {
+                    image 'python'
+                }
+            }
             steps {
+                sh 'python -m main.py'
                 echo "is build"
             }
         }
@@ -13,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "is deploy"
+                sh 'is deploy'
             }
         }
      }
