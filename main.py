@@ -1,1 +1,1 @@
-print("fdsfdsfsdf")
+print("ok")
