@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'python main.go'
+                sh 'python3 main.go'
             }
         }
     }
