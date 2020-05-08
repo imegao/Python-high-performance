@@ -3,7 +3,8 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            sh 'python3 main.py'
+            echo 'iicacidsic'
+            sh 'python main.py'
          }
       }
    }
