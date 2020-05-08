@@ -1,10 +1,10 @@
 pipeline {
-    agent none
-    stages {
-        stage('Build') {
-            steps {
-                sh 'python3 main.go'
-            }
-        }
-    }
+   agent any
+   stages {
+      stage('Hello') {
+         steps {
+            sh 'python3 main.py'
+         }
+      }
+   }
 }
