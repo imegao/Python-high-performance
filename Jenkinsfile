@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Hello') {
          steps {
-            echo 'iicacidsic'
+            sh 'ssh 192.168.2.128'
             sh 'python main.py'
          }
       }
